@@ -32,7 +32,7 @@ end
 
 % Plot results
 figure; set(gcf, 'Color', 'w');
-for j = 1:Nt+1
+for j = 1:Nt
     plot(x, u(j,:), 'Color', 0.5*[1 1 1 0.5], ...
         'LineWidth',0.01); hold on;
     h = plot(x, u(j, :), 'k', 'LineWidth',1.5);
@@ -40,4 +40,5 @@ for j = 1:Nt+1
         c, t(j)));
     axis([0 1 -2 2]);
     pause(0.1); delete(h);
+
 end
